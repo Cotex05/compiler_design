@@ -12,6 +12,8 @@ import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import Home from "./Screens/Home";
 import About from "./Screens/About";
 import Docs from "./Screens/Docs";
+import Task1 from "./Screens/Task1";
+import Task2 from "./Screens/Task2";
 
 const drawerWidth = 240;
 
@@ -32,11 +34,11 @@ const navs = [
 
 const topics = [
   {
-    title: "Lab 1",
+    title: "Check Comment",
     path: "/task1",
   },
   {
-    title: "Lab 2",
+    title: "Check Identifier",
     path: "/task2",
   },
   {
@@ -123,6 +125,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="docs" element={<Docs />} />
           <Route path="about" element={<About />} />
+          <Route path="task1" element={<Task1 />} />
+          <Route path="task2" element={<Task2 />} />
         </Routes>
       </Box>
     </BrowserRouter>
