@@ -84,7 +84,17 @@ function Task2() {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <Toolbar />
-      <h2>Check whether a given identifier is valid or not.</h2>
+      <Typography variant="h6" style={{ margin: 10 }}>
+        To design an online simulator that checks whether a user input string is
+        a valid identifier or not.
+      </Typography>
+      <Typography paragraph style={{ margin: 10 }}>
+        Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
+        ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar elementum
+        integer enim neque volutpat ac tincidunt. Ornare suspendisse sed nisi
+        lacus sed viverra tellus. Purus sit amet volutpat consequat mauris.
+        Elementum eu facilisis sed odio morbi.
+      </Typography>
       <Typography paragraph>
         Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
         ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar elementum

@@ -14,6 +14,8 @@ import About from "./Screens/About";
 import Docs from "./Screens/Docs";
 import Task1 from "./Screens/Task1";
 import Task2 from "./Screens/Task2";
+import { Avatar } from "@mui/material";
+import Task3 from "./Screens/Task3";
 
 const drawerWidth = 240;
 
@@ -42,7 +44,7 @@ const topics = [
     path: "/task2",
   },
   {
-    title: "Lab 3",
+    title: "Lexical Analyzer",
     path: "/task3",
   },
   {
@@ -64,7 +66,13 @@ function App() {
           position="fixed"
           sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
         >
-          <Toolbar>
+          <Toolbar style={{ flexDirection: "row" }}>
+            <Avatar
+              alt="IEM"
+              src={require("./assets/logo.png")}
+              sx={{ width: 56, height: 53 }}
+              style={{ margin: 10 }}
+            />
             <Typography variant="h5" noWrap component="div">
               Compiler Design Lab
             </Typography>
@@ -127,6 +135,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="task1" element={<Task1 />} />
           <Route path="task2" element={<Task2 />} />
+          <Route path="task3" element={<Task3 />} />
         </Routes>
       </Box>
     </BrowserRouter>
