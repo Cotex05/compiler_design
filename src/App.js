@@ -16,6 +16,8 @@ import Task1 from "./Screens/Task1";
 import Task2 from "./Screens/Task2";
 import { Avatar } from "@mui/material";
 import Task3 from "./Screens/Task3";
+import Task4 from "./Screens/Task4";
+import Task5 from "./Screens/Task5";
 
 const drawerWidth = 240;
 
@@ -29,7 +31,7 @@ const navs = [
     path: "/docs",
   },
   {
-    title: "About",
+    title: "About Us",
     path: "/about",
   },
 ];
@@ -48,11 +50,11 @@ const topics = [
     path: "/task3",
   },
   {
-    title: "Lab 4",
+    title: "Left & Right Derivation",
     path: "/task4",
   },
   {
-    title: "Lab 5",
+    title: "Parse Tree",
     path: "/task5",
   },
 ];
@@ -136,6 +138,8 @@ function App() {
           <Route path="task1" element={<Task1 />} />
           <Route path="task2" element={<Task2 />} />
           <Route path="task3" element={<Task3 />} />
+          <Route path="task4" element={<Task4 />} />
+          <Route path="task5" element={<Task5 />} />
         </Routes>
       </Box>
     </BrowserRouter>

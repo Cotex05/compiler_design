@@ -42,17 +42,25 @@ function Task1() {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <Toolbar />
-      <Typography variant="h6" style={{ margin: 10 }}>
+      <Typography variant="h5" style={{ margin: 10, fontWeight: "bold" }}>
         To design an online simulator that checks whether a user input string is
         a comment or not.
       </Typography>
-      <Typography paragraph style={{ margin: 10 }}>
-        Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-        ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar elementum
-        integer enim neque volutpat ac tincidunt. Ornare suspendisse sed nisi
-        lacus sed viverra tellus. Purus sit amet volutpat consequat mauris.
-        Elementum eu facilisis sed odio morbi.
+      <Typography paragraph>
+        Given a string as user input, representing a program snippet, the task
+        is to check if the given string is a single/multi-line comment or not.
       </Typography>
+      <Typography style={{ fontFamily: "monospace" }}>
+        * Single Line Comment: Comments preceded by a Double Slash ('//')
+      </Typography>
+      <Typography style={{ fontFamily: "monospace" }}>
+        * Multi-line Comment: Comments starting with ('/*') and ending with
+        ('*/')
+      </Typography>
+      <Typography paragraph style={{ margin: 20, fontFamily: "monospace" }}>
+        <a href="https://compiler-lab.web.app/docs">Read More...</a>
+      </Typography>
+      <br />
       <TextField
         label="Write string here"
         variant="filled"

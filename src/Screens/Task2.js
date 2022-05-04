@@ -65,6 +65,10 @@ function Task2() {
       );
       return;
     }
+    if (input.match(/\s/)) {
+      setMessage("Given input is not a valid identifier!");
+      return;
+    }
 
     if (input.match(/^[_$a-zA-Z][_a-zA-Z0-9]{0,31}/)) {
       //   alert("Given input string is a comment!");
@@ -84,23 +88,32 @@ function Task2() {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <Toolbar />
-      <Typography variant="h6" style={{ margin: 10 }}>
+      <Typography variant="h5" style={{ margin: 10, fontWeight: "bold" }}>
         To design an online simulator that checks whether a user input string is
         a valid identifier or not.
       </Typography>
-      <Typography paragraph style={{ margin: 10 }}>
-        Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-        ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar elementum
-        integer enim neque volutpat ac tincidunt. Ornare suspendisse sed nisi
-        lacus sed viverra tellus. Purus sit amet volutpat consequat mauris.
-        Elementum eu facilisis sed odio morbi.
-      </Typography>
       <Typography paragraph>
-        Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-        ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar elementum
-        integer enim neque volutpat ac tincidunt. Ornare suspendisse sed nisi
-        lacus sed viverra tellus. Purus sit amet volutpat consequat mauris.
-        Elementum eu facilisis sed odio morbi.
+        Given a string as user input, representing a string, the task is to
+        check if the string is a valid identifier or not. In order to qualify as
+        a valid identifier, the string must satisfy all the following
+        conditions:
+      </Typography>
+      <Typography style={{ fontFamily: "monospace" }}>
+        <ul>
+          <li>
+            It must start with either ('_', '$') or any of the characters from
+            the ranges ['a', 'z'] and ['A', 'Z']
+          </li>
+          <li>There must not be any white space in the string</li>
+          <li>
+            All the subsequent characters after the first character must not
+            consist of any special characters except '$'.
+          </li>
+          <li>The string must not exceed 31 characters</li>
+        </ul>
+      </Typography>
+      <Typography paragraph style={{ margin: 20, fontFamily: "monospace" }}>
+        <a href="https://compiler-lab.web.app/docs">Read More...</a>
       </Typography>
       <TextField
         label="Write an identifier "

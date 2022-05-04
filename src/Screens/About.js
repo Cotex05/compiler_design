@@ -16,7 +16,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const CardBox = ({ data }) => {
   return (
     <Card sx={{ maxWidth: 300 }} style={{ elevation: 5, margin: 10 }}>
-      <CardActionArea>
+      <CardActionArea href={data.link} target="_blank">
         <Box style={{ alignItems: "center", margin: 10 }}>
           <Avatar
             alt="Profile Image"
@@ -66,17 +66,17 @@ function About() {
       link: "https://www.linkedin.com/in/md-faisal-farooquee/",
     },
     {
+      name: "Bishwajeet Rana",
+      img: require("../assets/biswajeet.png"),
+      link: "https://www.linkedin.com/in/bishwajeet-rana-331352188/",
+    },
+    {
       name: "Anshu Kumar",
       img: require("../assets/anshu.png"),
       link: "https://www.linkedin.com/in/anshu-kumar-736310213",
     },
     {
-      name: "BISHWAJEET RANA",
-      img: require("../assets/biswajeet.png"),
-      link: "https://www.linkedin.com/in/bishwajeet-rana-331352188/",
-    },
-    {
-      name: "Bipul",
+      name: "Bipul Kumar",
       img: require("../assets/bipul.png"),
       link: "https://www.linkedin.com/in/bipul-kumar-882327202/",
     },
