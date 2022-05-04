@@ -171,6 +171,14 @@ function Docs() {
                 <li>Special Characters</li>
                 <li>Operators</li>
               </ul>
+              <br />
+              <img
+                src={require("../assets/lexicalanalyzer.png")}
+                alt="Parse Tree"
+                height="auto"
+                width="500"
+                style={{ margin: 10 }}
+              />
             </Typography>
             <Typography variant="h6">Algorithm</Typography>
             <Typography paragraph>
