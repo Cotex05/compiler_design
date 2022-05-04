@@ -24,7 +24,25 @@ function Task4() {
 
   const [step, setStep] = useState(0);
 
-  const images = [
+  const rightDerivationImages = [
+    {
+      uri: require("../assets/rd1.png"),
+    },
+    {
+      uri: require("../assets/rd2.png"),
+    },
+    {
+      uri: require("../assets/rd3.png"),
+    },
+    {
+      uri: require("../assets/rd4.png"),
+    },
+    {
+      uri: require("../assets/rd5.png"),
+    },
+  ];
+
+  const leftDerivationImages = [
     {
       uri: require("../assets/p1.png"),
     },
@@ -61,11 +79,12 @@ function Task4() {
   const handleLeftDerivation = () => {
     setDerivation("left");
     setGenerated(true);
+    setStep(0);
   };
 
   const handleRightDerivation = () => {
     setDerivation("right");
-    setGenerated(false);
+    setGenerated(true);
     setStep(0);
   };
 
@@ -151,7 +170,11 @@ function Task4() {
             <Grid item lg={4}>
               <div style={{ margin: "auto", width: 250 }}>
                 <img
-                  src={images[step].uri}
+                  src={
+                    derivation === "left"
+                      ? leftDerivationImages[step].uri
+                      : rightDerivationImages[step].uri
+                  }
                   alt="Parse Tree"
                   width="250"
                   height="auto"
