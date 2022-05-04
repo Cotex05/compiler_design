@@ -14,7 +14,7 @@ import About from "./Screens/About";
 import Docs from "./Screens/Docs";
 import Task1 from "./Screens/Task1";
 import Task2 from "./Screens/Task2";
-import { Avatar } from "@mui/material";
+import { Avatar, Button } from "@mui/material";
 import Task3 from "./Screens/Task3";
 import Task4 from "./Screens/Task4";
 import Task5 from "./Screens/Task5";
@@ -68,7 +68,9 @@ function App() {
           position="fixed"
           sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
         >
-          <Toolbar style={{ flexDirection: "row" }}>
+          <Toolbar
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
             <Avatar
               alt="IEM"
               src={require("./assets/logo.png")}
@@ -78,6 +80,14 @@ function App() {
             <Typography variant="h5" noWrap component="div">
               Compiler Design Lab
             </Typography>
+            <Button
+              variant="contained"
+              color="info"
+              target={"_blank"}
+              href="https://github.com/Cotex05/compiler_design"
+            >
+              Github
+            </Button>
           </Toolbar>
         </AppBar>
         <Drawer
